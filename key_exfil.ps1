@@ -12,7 +12,7 @@ $filesToZip = @(
     "$env:USERPROFILE\Downloads\key_1.pdf",
     "$env:USERPROFILE\Downloads\key_2.pdf",
     "$env:USERPROFILE\Downloads\key_3.pdf",
-    "$env:USERPROFILE\Downloads\key_4.pdf",
+    "$env:USERPROFILE\Downloads\key_4.pdf"
 )
 
 Add-Type -AssemblyName System.IO.Compression.FileSystem
